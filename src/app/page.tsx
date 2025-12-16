@@ -346,7 +346,7 @@ export default function Home() {
                             <div className="space-y-6">
                                 <div className="relative group">
                                     <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                                    <div className="relative rounded-xl bg-[#0a0a0f] border border-white/10 p-6 shadow-2xl overflow-hidden">
+                                    <div className="relative rounded-xl bg-[#0a0a0f] border border-white/10 p-6 shadow-2xl overflow-x-auto">
                                         <div className="flex items-center justify-between mb-4">
                                             <div className="flex gap-2">
                                                 <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
@@ -355,7 +355,7 @@ export default function Home() {
                                             </div>
                                             <span className="text-xs text-zinc-600">create_keys.dart</span>
                                         </div>
-                                        <pre className="font-mono text-sm overflow-x-auto text-zinc-300">
+                                        <pre className="font-mono text-sm overflow-x-auto text-zinc-300 max-w-full w-0 min-w-full">
                                             <code>{`// Create biometric-protected keys
 final result = await BiometricSignature()
   .createKeys(
@@ -373,7 +373,7 @@ if (result != null) {
 
                                 <div className="relative group">
                                     <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                                    <div className="relative rounded-xl bg-[#0a0a0f] border border-white/10 p-6 shadow-2xl overflow-hidden">
+                                    <div className="relative rounded-xl bg-[#0a0a0f] border border-white/10 p-6 shadow-2xl overflow-x-auto">
                                         <div className="flex items-center justify-between mb-4">
                                             <div className="flex gap-2">
                                                 <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
@@ -382,7 +382,7 @@ if (result != null) {
                                             </div>
                                             <span className="text-xs text-zinc-600">sign_data.dart</span>
                                         </div>
-                                        <pre className="font-mono text-sm overflow-x-auto text-zinc-300">
+                                        <pre className="font-mono text-sm overflow-x-auto text-zinc-300 max-w-full w-0 min-w-full">
                                             <code>{`// Sign a challenge from your server
 final signature = await BiometricSignature()
   .createSignature(
