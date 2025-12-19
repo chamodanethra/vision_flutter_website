@@ -58,7 +58,7 @@ export default function Home() {
                     <div className="max-w-4xl mx-auto space-y-8">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium uppercase tracking-wider">
                             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                            <span>v8.5.0 — iOS • Android • macOS</span>
+                            <span>v9.0.0 — iOS • Android • macOS • Windows</span>
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">
@@ -70,8 +70,9 @@ export default function Home() {
 
                         <p className="max-w-2xl mx-auto text-lg md:text-xl text-zinc-400 leading-relaxed">
                             Create cryptographic signatures using device biometrics with keys stored in
-                            <span className="text-white font-medium"> Secure Enclave</span> (iOS/macOS) and
-                            <span className="text-white font-medium"> StrongBox/Keystore</span> (Android).
+                            <span className="text-white font-medium"> Secure Enclave</span> (iOS/macOS),
+                            <span className="text-white font-medium"> StrongBox/Keystore</span> (Android), and
+                            <span className="text-white font-medium"> TPM</span> (Windows).
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -104,7 +105,7 @@ export default function Home() {
                             <div className="text-sm text-zinc-500 mt-1">Key Algorithms</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">3</div>
+                            <div className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">4</div>
                             <div className="text-sm text-zinc-500 mt-1">Platforms Supported</div>
                         </div>
                         <div>
@@ -182,18 +183,18 @@ export default function Home() {
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-4xl font-bold mb-4">Multi-Platform Support</h2>
-                            <p className="text-zinc-400">Native implementation on every platform. No compromises.</p>
+                            <p className="text-zinc-400">Native implementation on every platform including Windows with TPM support. No compromises.</p>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8">
-                            <div className="relative p-8 rounded-2xl bg-gradient-to-b from-zinc-800/50 to-zinc-900/50 border border-white/5 overflow-hidden group">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="relative p-6 rounded-2xl bg-gradient-to-b from-zinc-800/50 to-zinc-900/50 border border-white/5 overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
                                 <div className="relative">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-lg">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg">
                                         🍎
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4">iOS</h3>
-                                    <ul className="space-y-3 text-sm text-zinc-400">
+                                    <h3 className="text-xl font-bold mb-3">iOS</h3>
+                                    <ul className="space-y-2 text-sm text-zinc-400">
                                         <li className="flex items-center gap-2">
                                             <span className="text-green-500">✓</span> Secure Enclave
                                         </li>
@@ -210,14 +211,14 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <div className="relative p-8 rounded-2xl bg-gradient-to-b from-zinc-800/50 to-zinc-900/50 border border-white/5 overflow-hidden group">
+                            <div className="relative p-6 rounded-2xl bg-gradient-to-b from-zinc-800/50 to-zinc-900/50 border border-white/5 overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-3xl"></div>
                                 <div className="relative">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-800 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-lg">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-green-600 to-green-800 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg">
                                         🤖
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4">Android</h3>
-                                    <ul className="space-y-3 text-sm text-zinc-400">
+                                    <h3 className="text-xl font-bold mb-3">Android</h3>
+                                    <ul className="space-y-2 text-sm text-zinc-400">
                                         <li className="flex items-center gap-2">
                                             <span className="text-green-500">✓</span> StrongBox / Keystore
                                         </li>
@@ -234,25 +235,49 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <div className="relative p-8 rounded-2xl bg-gradient-to-b from-zinc-800/50 to-zinc-900/50 border border-white/5 overflow-hidden group">
+                            <div className="relative p-6 rounded-2xl bg-gradient-to-b from-zinc-800/50 to-zinc-900/50 border border-white/5 overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl"></div>
                                 <div className="relative">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-gray-600 to-gray-800 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-lg">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-gray-600 to-gray-800 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg">
                                         💻
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4">macOS</h3>
-                                    <ul className="space-y-3 text-sm text-zinc-400">
+                                    <h3 className="text-xl font-bold mb-3">macOS</h3>
+                                    <ul className="space-y-2 text-sm text-zinc-400">
                                         <li className="flex items-center gap-2">
                                             <span className="text-green-500">✓</span> Secure Enclave
                                         </li>
                                         <li className="flex items-center gap-2">
-                                            <span className="text-green-500">✓</span> Touch ID on supported Macs
+                                            <span className="text-green-500">✓</span> Touch ID support
                                         </li>
                                         <li className="flex items-center gap-2">
                                             <span className="text-green-500">✓</span> ECDSA P-256 keys
                                         </li>
                                         <li className="flex items-center gap-2">
                                             <span className="text-green-500">✓</span> Keychain integration
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="relative p-6 rounded-2xl bg-gradient-to-b from-zinc-800/50 to-zinc-900/50 border border-white/5 overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl"></div>
+                                <div className="relative">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-600 to-blue-800 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-lg">
+                                        🪟
+                                    </div>
+                                    <h3 className="text-xl font-bold mb-3">Windows</h3>
+                                    <ul className="space-y-2 text-sm text-zinc-400">
+                                        <li className="flex items-center gap-2">
+                                            <span className="text-green-500">✓</span> TPM hardware backing
+                                        </li>
+                                        <li className="flex items-center gap-2">
+                                            <span className="text-green-500">✓</span> Windows Hello
+                                        </li>
+                                        <li className="flex items-center gap-2">
+                                            <span className="text-green-500">✓</span> ECDSA P-256 signing
+                                        </li>
+                                        <li className="flex items-center gap-2">
+                                            <span className="text-green-500">✓</span> PIN fallback support
                                         </li>
                                     </ul>
                                 </div>
